@@ -1,7 +1,9 @@
 <?php
 namespace app\index\controller;
 
-class Index
+use think\Controller;
+
+class Index extends Controller
 {
     public function index()
     {
@@ -10,7 +12,8 @@ class Index
 
     public function hello()
     {
-        $server = new swoole_websocket_server();
-        hash($server);
+        $server = new swoole_http_server();
+
+        halt($server);
     }
 }
