@@ -16,8 +16,8 @@ $http->set(
 );
 
 $http->on('WorkerStart',function (swoole_server $server, $worker_id){
-    require __DIR__ . '/../../tp_core/base.php';
-
+//    require __DIR__ . '/../../tp_core/base.php';
+    require __DIR__ . '/../public/index.php';
 
 });
 $http->on('request', function ($request, $response) {
