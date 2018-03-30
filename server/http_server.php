@@ -16,12 +16,9 @@ $http->set(
 );
 
 $http->on('WorkerStart',function (swoole_server $server, $worker_id){
-    global $argv;
-    if($worker_id >= $serv->setting['worker_num']) {
-        swoole_set_process_name("php {$argv[0]} task worker");
-    } else {
-        swoole_set_process_name("php {$argv[0]} event worker");
-    }
+    require __DIR__ . '/../thinkphp/base.php';
+
+
 });
 $http->on('request', function ($request, $response) {
 
