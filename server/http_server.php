@@ -16,7 +16,7 @@ $http->set(
 );
 
 $http->on('WorkerStart',function (swoole_server $server, $worker_id){
-    require __DIR__ . '/../thinkphp/base.php';
+    require __DIR__ . '/../../tp_core/base.php';
 
 
 });
